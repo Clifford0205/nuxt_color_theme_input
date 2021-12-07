@@ -19,7 +19,16 @@
   }
 
   .main-content-outer {
+    @include te;
+
     flex: 1 1 700px;
+    margin-top: 80px;
+    padding: 40px 0;
+    // position: relative;
     display: flex;
+    min-width: 0;
+    min-height: calc(100vh - 80px);
+    background: var(--background-color);
+    color: var(--text-color);
   }
 }

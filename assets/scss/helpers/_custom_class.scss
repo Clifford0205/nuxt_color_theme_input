@@ -515,7 +515,9 @@
   }
 
   label {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
     max-width: 100%;
     font-weight: bold;
     position: relative;
@@ -525,6 +527,11 @@
     height: 100%;
     border-radius: 28px;
     cursor: pointer;
+    font-size: $font-sm;
+
+    .switch-icon {
+      position: relative;
+    }
 
     &.disabled {
       &::after {

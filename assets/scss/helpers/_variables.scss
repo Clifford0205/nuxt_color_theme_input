@@ -32,7 +32,13 @@ $font-weights: (
 );
 
 $light-bg: #fff;
-$dark-bg: #1e1e1e;
+$dark-bg: #3e3e3e;
+$light-text: #000;
+$dark-text: #fff;
+$light-shadow: #0000000d;
+$dark-shadow: #ffffffbf;
+$light-head-bg: #fff;
+$dark-head-bg: #000;
 
 @function weight($weight-name) {
   @return map-get($font-weights, $weight-name);
@@ -40,8 +46,14 @@ $dark-bg: #1e1e1e;
 
 [data-mode='light'] {
   --background-color: #{$light-bg};
+  --text-color: #{$light-text};
+  --shadow-color: #{$light-shadow};
+  --header-bg-color: #{$light-head-bg};
 }
 
 [data-mode='dark'] {
   --background-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --shadow-color: #{$dark-shadow};
+  --header-bg-color: #{$dark-head-bg};
 }

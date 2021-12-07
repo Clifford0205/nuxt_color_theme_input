@@ -6,14 +6,15 @@
   right: 0;
   top: 0;
   z-index: 500;
-  box-shadow: 0 3px 6px #0000000d;
+  box-shadow: 0 3px 6px var(--shadow-color);
+  background: var(--header-bg-color);
 
   .header-content {
     align-items: center;
     display: flex;
     justify-content: space-between;
     position: relative;
-    background-color: #fff;
+    // background-color: #fff;
     color: $text-color;
     padding-left: 30px;
     padding-right: 30px;
