@@ -1,14 +1,38 @@
 <template>
   <section class="main-content">
-    <div class="home">測試測試</div>
+    <div class="home">
+      <b-form-group label="選擇輸入的資料型態">
+        <b-form-radio-group
+          id="btn-radios-1"
+          v-model="showType"
+          :options="options"
+          name="radios-btn-default"
+          buttons
+        ></b-form-radio-group>
+      </b-form-group>
+      <InputComponent :showType="showType" v-model="result" />
+    </div>
   </section>
 </template>
 
 <script>
 export default {
+  name: 'PagesIndex',
   data() {
     return {
-      events: [],
+      result: '',
+      selectList: [
+        { val: '', item: 'Please select one' },
+        { val: 'A', item: '使用者A' },
+        { val: 'B', item: '使用者B' },
+        { val: 'C', item: '使用者C' },
+      ],
+      options: [
+        { text: 'text', value: 'text' },
+        { text: 'radio', value: 'radio' },
+        { text: 'select', value: 'select' },
+      ],
+      showType: 'text',
     };
   },
   head() {

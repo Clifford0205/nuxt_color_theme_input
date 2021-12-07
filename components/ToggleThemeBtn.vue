@@ -18,11 +18,6 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'ToggleThemeBtn',
 
-  mounted() {
-    // const initUserTheme = this.getMediaPreference();
-    // this.setTheme(initUserTheme);
-  },
-
   data() {
     return {
       userTheme: 'light-theme',
@@ -45,14 +40,6 @@ export default {
 
   methods: {
     ...mapActions('theme', ['toggleTheme']),
-
-    setTheme(theme) {
-      localStorage.setItem('user-theme', theme);
-      this.userTheme = theme;
-      document.documentElement.className = theme;
-    },
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
