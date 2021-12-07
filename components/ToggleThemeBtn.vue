@@ -2,7 +2,7 @@
   <div>
     <client-only>
       <div class="switcher-wrap">
-        <input id="checkbox" type="checkbox" class="switcher" v-model="theme" />
+        <input id="checkbox" v-model="theme" type="checkbox" class="switcher" />
         <label for="checkbox" class="switch-label">
           <span class="switch-icon">🌙</span>
           <span class="switch-icon">☀️</span>

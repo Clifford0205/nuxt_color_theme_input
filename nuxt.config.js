@@ -19,6 +19,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/api',
     { src: '~/plugins/storage.client.js' },
     { src: '~/plugins/theme.client.js' },
   ],

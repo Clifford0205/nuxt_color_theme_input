@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="input-text" v-if="showType === 'text'">
-      <input type="text" v-model="result" />
+    <div v-if="showType === 'text'" class="input-text">
+      <input v-model="result" type="text" />
     </div>
-    <div class="input-radio" v-else-if="showType === 'radio'">
-      <input type="radio" id="one" value="One" v-model="result" />
+    <div v-else-if="showType === 'radio'" class="input-radio">
+      <input id="one" v-model="result" type="radio" value="One" />
       <label for="one">One</label>
       <br />
-      <input type="radio" id="two" value="Two" v-model="result" />
+      <input id="two" v-model="result" type="radio" value="Two" />
       <label for="two">Two</label>
       <br />
     </div>
-    <div class="select" v-else>
+    <div v-else class="select">
       <select v-model="result">
         <option
           v-for="(option, index) in selectList"
-          :value="option.val"
           :key="option.val"
+          :value="option.val"
           :disabled="index == 0"
         >
           {{ option.item }}
@@ -51,11 +51,6 @@ export default {
       ],
     };
   },
-  watch: {
-    showType() {
-      this.$emit('input', '');
-    },
-  },
   computed: {
     result: {
       get() {
@@ -64,6 +59,11 @@ export default {
       set(val) {
         this.$emit('input', val);
       },
+    },
+  },
+  watch: {
+    showType() {
+      this.$emit('input', '');
     },
   },
 };

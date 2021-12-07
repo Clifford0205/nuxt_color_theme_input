@@ -10,7 +10,11 @@
           buttons
         ></b-form-radio-group>
       </b-form-group>
-      <InputComponent :showType="showType" v-model="result" />
+      <InputComponent v-model="result" :show-type="showType" />
+
+      <div class="link-area">
+        頁面連結:<nuxt-link :to="{ name: 'api-page' }"> api資料頁 </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -21,12 +25,6 @@ export default {
   data() {
     return {
       result: '',
-      selectList: [
-        { val: '', item: 'Please select one' },
-        { val: 'A', item: '使用者A' },
-        { val: 'B', item: '使用者B' },
-        { val: 'C', item: '使用者C' },
-      ],
       options: [
         { text: 'text', value: 'text' },
         { text: 'radio', value: 'radio' },

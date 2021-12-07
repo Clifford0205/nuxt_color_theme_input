@@ -2,7 +2,7 @@
   box-sizing: border-box;
 
   a {
-    color: #000;
+    color: var(--text-color);
     transition: all 0.3s ease-in-out;
 
     &:hover {
