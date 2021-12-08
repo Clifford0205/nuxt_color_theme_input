@@ -32,18 +32,19 @@ $font-weights: (
 );
 
 $light-bg: #fff;
-$dark-bg: #3e3e3e;
 $light-text: #000;
-$dark-text: #fff;
 $light-shadow: #0000000d;
-$dark-shadow: #ffffffbf;
 $light-head-bg: #fff;
-$dark-head-bg: #000;
 $light-btn-bg: #fff;
-$dark-btn-bg: #5a6268;
 $light-btn-active-bg: #545b62;
-$dark-btn-active-bg: #000;
 $light-card-border: #000;
+
+$dark-bg: #3e3e3e;
+$dark-text: #fff;
+$dark-shadow: #ffffffbf;
+$dark-head-bg: #000;
+$dark-btn-bg: #5a6268;
+$dark-btn-active-bg: #000;
 $dark-card-border: #fff;
 
 @function weight($weight-name) {

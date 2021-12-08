@@ -1,69 +1,8 @@
-# nuxt_input
+## 將 SCSS 以及 API 的基本共用設定移出來做共用管理
 
-## Build Setup
+###API 串接使用 nuxt axios
+在 plugin 中首先引入 api 資料夾底下預先設定好的 axios 參數,然後再 inject 設定好的 api 方法到全域的 nuxt 物件底下,
+在專案中就可以用$api 進行調用,進行擴充時,只需要在 api 資料夾,新增 js 檔案(相關功能寫在同一支 js),每支 js 都以 api 功能去命名,可以快速地擴充並且方便維護
 
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+###SCSS 架構
+共用的設定、reset 全部寫在 helpers 資料夾中,每頁共用的元件寫在(例如 header)寫在 layouts 資料夾,個別頁面的 SCSS 會在 AllPage.scss 中被引入,每一個頁面一支 scss 檔案,由於每個 page 最外層都有 main-content 的 class 所以共用的樣式可以寫在 main-content 中,個別頁面的 scss 只要專注自己的樣式即可,主題變換的顏色則寫在\_variable.scss 由 CSS 的變數引入 SCSS 的變數

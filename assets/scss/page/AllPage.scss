@@ -5,20 +5,6 @@
   max-width: 700px;
   width: 700px;
 
-  .block-btn {
-    @include flex-center(row);
-
-    height: 30px;
-    width: 70px;
-    background-color: #cbe5fe;
-
-    &.clear {
-      background-color: $alert-color;
-      color: #fff;
-      width: 100px;
-    }
-  }
-
   .link-area {
     margin-top: 40px;
     font-size: $font-lg;
