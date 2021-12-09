@@ -1,0 +1,16 @@
+[
+  {
+    "name": "api-page",
+    "path": "/api-page",
+    "component": "/Users/tianzhongzhan/Desktop/自己的東西/nuxt_input/pages/api-page/index.vue",
+    "chunkName": "pages/api-page/index",
+    "_name": "_319e78d6"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/tianzhongzhan/Desktop/自己的東西/nuxt_input/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_c6b2bf1e"
+  }
+]
